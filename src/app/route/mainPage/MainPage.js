@@ -421,7 +421,7 @@ function MainPage() {
       {header()}
       {main()}
       {roadMap()}
-      <Team data={teamObject} header='OUR TEAM' />
+      <Team data={teamObject} bigHeader='Behind The Scene' smallHeader='The Team' />
     </div>
   );
 }

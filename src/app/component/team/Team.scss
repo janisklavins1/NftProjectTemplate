@@ -19,9 +19,22 @@
   }
 
   &-Heading {
-    text-align: center;
-    padding-bottom: 4vh;
+    // center text
+    display: grid;
+    justify-content: center;
     font-size: 5vh;
+    padding-bottom: 1vh;
+
+    @media only screen and (max-width: 450px) {
+      font-size: 3vh;
+    }
+  }
+
+  &-SmallHeading {
+    font-size: 1.5rem;
+  }
+
+  &-BigHeading {
   }
 
   &-Name {
