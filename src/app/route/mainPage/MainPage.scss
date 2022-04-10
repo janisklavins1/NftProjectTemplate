@@ -249,38 +249,38 @@ a {
   }
 }
 
-.Team {
-  padding-top: 12vh;
-  color: #9d9c9c;
-  font-weight: 700;
-  padding-bottom: 3vh;
+// .Team {
+//   padding-top: 12vh;
+//   color: #9d9c9c;
+//   font-weight: 700;
+//   padding-bottom: 3vh;
 
-  &-Wrapper {
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-  }
+//   &-Wrapper {
+//     padding: 0 20px;
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     grid-gap: 15px;
+//   }
 
-  &-Heading {
-    text-align: center;
-    padding-bottom: 4vh;
-    font-size: 5vh;
-  }
+//   &-Heading {
+//     text-align: center;
+//     padding-bottom: 4vh;
+//     font-size: 5vh;
+//   }
 
-  &-Container {
-    margin-left: 10px;
-    text-align: center;
-    p {
-      margin-top: 0;
-    }
+//   &-Container {
+//     margin-left: 10px;
+//     text-align: center;
+//     p {
+//       margin-top: 0;
+//     }
 
-    img {
-      border-radius: 25px;
-      width: 70%;
-    }
-  }
-}
+//     img {
+//       border-radius: 25px;
+//       width: 70%;
+//     }
+//   }
+// }
 
 .WalletAddress {
   border: solid white 1px;

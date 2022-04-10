@@ -5,6 +5,7 @@ import { connect } from '../../store/blockchain/blockchainActions';
 import { fetchData } from '../../store/data/dataActions';
 import 'font-awesome/css/font-awesome.min.css';
 import './MainPage.scss';
+import Team from '../../component/team/Team';
 
 import ABI from '../mainPage/abi.json';
 
@@ -54,7 +55,6 @@ function MainPage() {
   const ContractAddress = '0x5bf8356D6997202d78058b78D8895dcaaB7F111d';
 
   const claimNFTs = async () => {
-
     try {
       const web3 = new Web3(window.ethereum);
       const contract = new web3.eth.Contract(ABI, ContractAddress, {
@@ -64,19 +64,17 @@ function MainPage() {
       const priceContract = await contract.methods.cost().call(); // cost()
       const totalCostWei = priceContract * mintAmount;
       const gasLimit = Math.round(
-        (await contract.methods
-          .mint(mintAmount)
-          .estimateGas({
-            value: totalCostWei.toString(),
-            from: blockchain.account,
-          })) * 1.2
+        (await contract.methods.mint(mintAmount).estimateGas({
+          value: totalCostWei.toString(),
+          from: blockchain.account,
+        })) * 1.2
       );
 
       console.log('Cost: ', totalCostWei);
       console.log('Gas limit: ', gasLimit);
       setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
       setClaimingNft(true);
-  
+
       blockchain.smartContract.methods
         .mint(mintAmount)
         .send({
@@ -254,8 +252,8 @@ function MainPage() {
                   )}
                 </div>
                 <div className="Main-Text">
-                  {CONFIG.DISPLAY_COST} ETH + GAS FEES | FIRST 333 ARE FREE | TOTAL{' '}
-                  {CONFIG.MAX_SUPPLY}
+                  {CONFIG.DISPLAY_COST} ETH + GAS FEES | FIRST 333 ARE FREE |
+                  TOTAL {CONFIG.MAX_SUPPLY}
                 </div>
                 <div className="Main-Text"> </div>
                 <div className="Main-Row">
@@ -409,7 +407,11 @@ function MainPage() {
             href="https://etherscan.io/address/0x5bf8356d6997202d78058b78d8895dcaab7f111d"
             target="_blank"
           >
-            <img className="Socials-OpenSea" src={IMAGES.openSea} alt="openSea" />
+            <img
+              className="Socials-OpenSea"
+              src={IMAGES.openSea}
+              alt="openSea"
+            />
           </a>
           <a
             className="Socials-Icon"
@@ -423,13 +425,40 @@ function MainPage() {
     );
   };
 
+  const teamObject = [
+    {
+      name: 'Designer',
+      url: 'https://twitter.com/Blu_Beanz',
+      image: IMAGES.designer,
+      role: 'Artist',
+    },
+    {
+      name: 'Designer',
+      url: 'https://twitter.com/Blu_Beanz',
+      image: IMAGES.designer,
+      role: 'Retard',
+    },
+    {
+      name: 'Designer',
+      url: 'https://twitter.com/Blu_Beanz',
+      image: IMAGES.designer,
+      role: 'Retard',
+    },
+    {
+      name: 'Designer',
+      url: 'https://twitter.com/Blu_Beanz',
+      image: IMAGES.designer,
+      role: 'Artist',
+    }
+  ];
+
   return (
     <div className="Wrapper">
       {socials()}
       {header()}
       {main()}
       {roadMap()}
-      {team()}
+      <Team data={teamObject} />
     </div>
   );
 }
