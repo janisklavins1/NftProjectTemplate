@@ -354,43 +354,6 @@ function MainPage() {
     );
   };
 
-  const team = () => {
-    return (
-      <footer className="Team">
-        <div className="Team-Heading">OUR TEAM</div>
-        <div className="Team-Wrapper">
-          <div className="Team-Container">
-            <a href="https://instagram.com/meancurry">
-              <img src={IMAGES.meancurry} />
-            </a>
-            <p>meancurry</p>
-            <p>Artist</p>
-          </div>
-          <div className="Team-Container">
-            <a href="https://twitter.com/zugged">
-              {' '}
-              <img src={IMAGES.dev} />
-            </a>
-            <p>zugDev</p>
-            <p>Lead developer</p>
-          </div>
-          <div className="Team-Container">
-            <a href="https://twitter.com/0xnftmaster">
-              <img src={IMAGES.marketing} />
-            </a>
-            <p>0xMastr</p>
-            <p>Marketing</p>
-          </div>
-          <div className="Team-Container">
-            <img src={IMAGES.designer} />
-            <p>Julie</p>
-            <p>Designer</p>
-          </div>
-        </div>
-      </footer>
-    );
-  };
-
   const socials = () => {
     return (
       <div className="Socials">
@@ -458,7 +421,7 @@ function MainPage() {
       {header()}
       {main()}
       {roadMap()}
-      <Team data={teamObject} />
+      <Team data={teamObject} header='OUR TEAM' />
     </div>
   );
 }
