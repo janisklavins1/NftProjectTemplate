@@ -23,7 +23,11 @@
     display: grid;
     justify-content: center;
     font-size: 5vh;
-    padding-bottom: 1vh;
+    padding-bottom: 2vh;
+
+    @media only screen and (max-width: 450px) {
+      font-size: 4vh;
+    }
 
     @media only screen and (max-width: 450px) {
       font-size: 3vh;
@@ -32,9 +36,11 @@
 
   &-SmallHeading {
     font-size: 1.5rem;
+    font-weight: lighter;
   }
 
   &-BigHeading {
+    border-bottom: 0.1vh solid white;
   }
 
   &-Name {
