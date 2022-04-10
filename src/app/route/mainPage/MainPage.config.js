@@ -11,3 +11,30 @@ export const IMAGES = {
     marketing: require('../../images/marketing.png').default,
     meancurry: require('../../images/meancurry.jpg').default
 }
+
+export const TEAM_OBJECT = [
+    {
+      name: 'Designer',
+      url: 'https://twitter.com/Blu_Beanz',
+      image: IMAGES.designer,
+      role: 'Artist',
+    },
+    {
+      name: 'Designer',
+      url: 'https://twitter.com/Blu_Beanz',
+      image: IMAGES.designer,
+      role: 'Retard',
+    },
+    {
+      name: 'Designer',
+      url: 'https://twitter.com/Blu_Beanz',
+      image: IMAGES.designer,
+      role: 'Retard',
+    },
+    {
+      name: 'Designer',
+      url: 'https://twitter.com/Blu_Beanz',
+      image: IMAGES.designer,
+      role: 'Artist',
+    }
+  ];

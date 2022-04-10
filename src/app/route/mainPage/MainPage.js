@@ -9,7 +9,7 @@ import Team from '../../component/team/Team';
 
 import ABI from '../mainPage/abi.json';
 
-import { IMAGES } from './MainPage.config';
+import { IMAGES, TEAM_OBJECT } from './MainPage.config';
 import Web3 from 'web3';
 
 function MainPage() {
@@ -388,32 +388,7 @@ function MainPage() {
     );
   };
 
-  const teamObject = [
-    {
-      name: 'Designer',
-      url: 'https://twitter.com/Blu_Beanz',
-      image: IMAGES.designer,
-      role: 'Artist',
-    },
-    {
-      name: 'Designer',
-      url: 'https://twitter.com/Blu_Beanz',
-      image: IMAGES.designer,
-      role: 'Retard',
-    },
-    {
-      name: 'Designer',
-      url: 'https://twitter.com/Blu_Beanz',
-      image: IMAGES.designer,
-      role: 'Retard',
-    },
-    {
-      name: 'Designer',
-      url: 'https://twitter.com/Blu_Beanz',
-      image: IMAGES.designer,
-      role: 'Artist',
-    }
-  ];
+  
 
   return (
     <div className="Wrapper">
@@ -421,7 +396,7 @@ function MainPage() {
       {header()}
       {main()}
       {roadMap()}
-      <Team data={teamObject} bigHeader='Behind The Scene' smallHeader='The Team' />
+      <Team data={TEAM_OBJECT} bigHeader='Behind The Scene' smallHeader='The Team' />
     </div>
   );
 }
