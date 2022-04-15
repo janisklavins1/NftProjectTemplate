@@ -3,13 +3,13 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { connect } from '../../store/blockchain/blockchainActions';
 import { fetchData } from '../../store/data/dataActions';
-import 'font-awesome/css/font-awesome.min.css';
 import './MainPage.scss';
-import Team from '../../component/team/Team';
-
+import Team from '../../component/Team/Team';
+import ContentWrapper from '../../component/ContentWrapper/ContentWrapper';
+import About from '../../component/About/About';
 import ABI from '../mainPage/abi.json';
 
-import { IMAGES, TEAM_OBJECT } from './MainPage.config';
+import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT } from './MainPage.config';
 import Web3 from 'web3';
 
 function MainPage() {
@@ -388,17 +388,30 @@ function MainPage() {
     );
   };
 
-  
-
   return (
-    <div className="Wrapper">
-      {socials()}
+    <ContentWrapper>
+      {/* {socials()}
       {header()}
       {main()}
-      {roadMap()}
-      <Team data={TEAM_OBJECT} bigHeader='Behind The Scene' smallHeader='The Team' />
-    </div>
+      {roadMap()} */}
+      <About
+        data={COMMUNITY_INFO}
+        image1={IMAGES.designer}
+        image2={IMAGES.designer}
+        image3={IMAGES.designer}
+        image4={IMAGES.designer}
+      />
+      <Team
+        data={TEAM_OBJECT}
+        bigHeader="Behind The Scene"
+        smallHeader="The Team"
+      />
+    </ContentWrapper>
   );
 }
 
 export default MainPage;
+
+// TO DO
+// Create  Road Map, Socials, Menu https://dreamingboys.com/#about
+// Add abi.json in one place

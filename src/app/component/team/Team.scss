@@ -1,6 +1,6 @@
 .Team {
   padding-top: 12vh;
-  color: #9d9c9c;
+  color: var(--secondFontColor);
   font-weight: 700;
   padding-bottom: 3vh;
 
@@ -40,7 +40,8 @@
   }
 
   &-BigHeading {
-    border-bottom: 0.1vh solid white;
+    border-bottom: 0.1vh solid var(--mainFontColor);
+    color: var(--mainFontColor);
   }
 
   &-Name {
@@ -59,13 +60,13 @@
 
     img {
       border-radius: 25px;
-      border: solid 4px white;
+      border: solid 4px var(--mainFontColor);
       width: 60%;
       margin-bottom: 0;
-      transition: border 0.5s cubic-bezier(0.08, 0.63, 1, 0.63);
+      transition: border 0.3s cubic-bezier(0.08, 0.63, 1, 0.63);
 
       &:hover {
-        border: solid 4px rgb(240, 202, 80);
+        border: solid 4px var(--detailColor);
       }
 
       @media only screen and (max-width: 800px) {
