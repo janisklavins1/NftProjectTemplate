@@ -1,26 +1,6 @@
 $page-bg-color: #0a3fe1;
 $page-base-text-color: rgb(216, 226, 239);
 
-body {
-  margin: 0;
-  font-family: SB, MBP, Helvetica Neue, Helvetica, Arial, sans;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #222222;
-}
-
-a {
-  text-decoration: none;
-}
-
-.Wrapper {
-  width: 100%;
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .Header {
   &-Container {
     max-width: 1170px;
