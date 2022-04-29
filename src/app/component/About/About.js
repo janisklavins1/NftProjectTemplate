@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.scss';
 import { FaArrowRight } from 'react-icons/fa';
+import Image from '../Image/Image';
 
 const About = ({ data, image1, image2, image3, image4 }) => {
   const {
@@ -51,16 +52,16 @@ const About = ({ data, image1, image2, image3, image4 }) => {
       <div className="About-Wrapper">
         <div className="About-ImageSection">
           <div className="About-ImageWrapper">
-            <img className="About-ImageWrapper-One" src={image1} alt="" />
+            <Image className="About-ImageWrapper-One" src={image1} alt={''} />
           </div>
           <div className="About-ImageWrapper">
-            <img className="About-ImageWrapper-Two" src={image2} alt="" />
+            <Image className="About-ImageWrapper-One" src={image1} alt={''} />
           </div>
           <div className="About-ImageWrapper">
-            <img className="About-ImageWrapper-Three" src={image3} alt="" />
+            <Image className="About-ImageWrapper-One" src={image1} alt={''} />
           </div>
           <div className="About-ImageWrapper">
-            <img className="About-ImageWrapper-Four" src={image4} alt="" />
+            <Image className="About-ImageWrapper-One" src={image1} alt={''} />
           </div>
         </div>
         <div className="About-TextSection">

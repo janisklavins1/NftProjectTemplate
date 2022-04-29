@@ -10,7 +10,7 @@ import About from '../../component/About/About';
 import MintPanel from '../../component/MintPanel/MintPanel';
 import ABI from '../mainPage/abi.json';
 import CONFIG_FILE from '../../util/config.json';
-import Loader from '../../component/Loader/Loader';
+import Image from '../../component/Image/Image';
 import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT } from './MainPage.config';
 import Web3 from 'web3';
 
@@ -356,10 +356,8 @@ function MainPage() {
     );
   };
 
-
   return (
     <ContentWrapper>
-      {/* <Loader/> */}
       {/* <MintPanel/> */}
       <About
         data={COMMUNITY_INFO}
