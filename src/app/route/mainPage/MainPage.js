@@ -7,8 +7,10 @@ import './MainPage.scss';
 import Team from '../../component/Team/Team';
 import ContentWrapper from '../../component/ContentWrapper/ContentWrapper';
 import About from '../../component/About/About';
+import MintPanel from '../../component/MintPanel/MintPanel';
 import ABI from '../mainPage/abi.json';
-
+import CONFIG_FILE from '../../util/config.json';
+import Loader from '../../component/Loader/Loader';
 import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT } from './MainPage.config';
 import Web3 from 'web3';
 
@@ -109,14 +111,14 @@ function MainPage() {
   };
 
   const getConfig = async () => {
-    const configResponse = await fetch('/config/config.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    });
-    const config = await configResponse.json();
-    SET_CONFIG(config);
+    // const configResponse = await fetch(CONFIG_FILE, {
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     Accept: 'application/json',
+    //   },
+    // });
+    // const config = await configResponse.json();
+    SET_CONFIG(CONFIG_FILE);
   };
 
   const startTimer = () => {
@@ -354,46 +356,11 @@ function MainPage() {
     );
   };
 
-  const socials = () => {
-    return (
-      <div className="Socials">
-        <div className="Socials-Container">
-          <a
-            className="Socials-Icon"
-            href="https://twitter.com/Blu_Beanz"
-            target="_blank"
-          >
-            <i className="fab fa-discord fa-lg"></i>
-          </a>
-          <a
-            className="Socials-Icon"
-            href="https://etherscan.io/address/0x5bf8356d6997202d78058b78d8895dcaab7f111d"
-            target="_blank"
-          >
-            <img
-              className="Socials-OpenSea"
-              src={IMAGES.openSea}
-              alt="openSea"
-            />
-          </a>
-          <a
-            className="Socials-Icon"
-            href="https://twitter.com/Blu_Beanz"
-            target="_blank"
-          >
-            <i className="fab fa-twitter fa-lg"></i>
-          </a>
-        </div>
-      </div>
-    );
-  };
 
   return (
     <ContentWrapper>
-      {/* {socials()}
-      {header()}
-      {main()}
-      {roadMap()} */}
+      {/* <Loader/> */}
+      {/* <MintPanel/> */}
       <About
         data={COMMUNITY_INFO}
         image1={IMAGES.designer}
@@ -414,4 +381,5 @@ export default MainPage;
 
 // TO DO
 // Create  Road Map, Socials, Menu https://dreamingboys.com/#about
+// Add loder until all images are loaded
 // Add abi.json in one place
