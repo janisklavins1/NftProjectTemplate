@@ -1,5 +1,7 @@
 import React from 'react';
 import './Team.scss';
+import Image from '../Image/Image';
+
 const Team = ({ data, bigHeader, smallHeader }) => {
   //url, image, name, role - data is an array of object [{}, {}, {}...]
 
@@ -7,11 +9,7 @@ const Team = ({ data, bigHeader, smallHeader }) => {
     return (
       <div className="Team-Container" key={idx}>
         <a href={memberObject.url}>
-          <img
-            src={memberObject.image}
-            alt={memberObject.name}
-            target="_blank"
-          />
+          <Image src={memberObject.image} alt={memberObject.name} />
         </a>
         <p className="Team-Name">{memberObject.name}</p>
         <p className="Team-Role">{memberObject.role}</p>
