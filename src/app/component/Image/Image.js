@@ -6,6 +6,10 @@ const Image = ({ src, alt }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const renderImagePlaceHolder = () => {
+    if (imageLoaded) {
+      return null;
+    }
+
     return (
       <div className='Image-Container'>
         <FaSpinner />
@@ -25,13 +29,11 @@ const Image = ({ src, alt }) => {
   };
 
   return (
-    <div>
-      {imageLoaded ? null : renderImagePlaceHolder()}
+    <>
+      {renderImagePlaceHolder()}
       {renderImage()}
-    </div>
+    </>
   );
-
-  
 };
 
 export default Image;
