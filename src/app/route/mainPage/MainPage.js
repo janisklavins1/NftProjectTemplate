@@ -8,9 +8,9 @@ import Team from '../../component/Team/Team';
 import ContentWrapper from '../../component/ContentWrapper/ContentWrapper';
 import About from '../../component/About/About';
 import MintPanel from '../../component/MintPanel/MintPanel';
+import RoadMap from '../../component/RoadMap/RoadMap';
 import ABI from '../mainPage/abi.json';
 import CONFIG_FILE from '../../util/config.json';
-import Image from '../../component/Image/Image';
 import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT } from './MainPage.config';
 import Web3 from 'web3';
 
@@ -359,6 +359,7 @@ function MainPage() {
   return (
     <ContentWrapper>
       {/* <MintPanel/> */}
+      <RoadMap/>
       <About
         data={COMMUNITY_INFO}
         image1={IMAGES.designer}
@@ -378,6 +379,5 @@ function MainPage() {
 export default MainPage;
 
 // TO DO
-// Create  Road Map, Socials, Menu https://dreamingboys.com/#about
-// Add loder until all images are loaded
+// Create  Road Map, Menu https://dreamingboys.com/#about
 // Add abi.json in one place

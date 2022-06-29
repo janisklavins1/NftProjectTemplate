@@ -1,0 +1,33 @@
+.RoadMap {
+  // color: white;
+
+  &-Card {
+    padding: '3px 10px';
+    text-align: center;
+    color: red;
+    background-color: grey;
+  }
+
+  &-box {
+    border-bottom: 3px solid;
+    padding-right: 50px;
+    height: 50%;
+  }
+
+  &-box1 {
+    transform: rotate(180deg);
+  }
+
+  &-Inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &-Circle {
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid red;
+  }
+}
+
+// transform: rotate(180deg);
