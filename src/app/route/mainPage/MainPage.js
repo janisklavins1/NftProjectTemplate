@@ -359,7 +359,7 @@ function MainPage() {
   return (
     <ContentWrapper>
       {/* <MintPanel/> */}
-      <RoadMap/>
+     
       <About
         data={COMMUNITY_INFO}
         image1={IMAGES.designer}
@@ -367,6 +367,14 @@ function MainPage() {
         image3={IMAGES.designer}
         image4={IMAGES.designer}
       />
+      <About
+        data={COMMUNITY_INFO}
+        image1={IMAGES.designer}
+        image2={IMAGES.designer}
+        image3={IMAGES.designer}
+        image4={IMAGES.designer}
+      />
+       <RoadMap/>
       <Team
         data={TEAM_OBJECT}
         bigHeader="Behind The Scene"

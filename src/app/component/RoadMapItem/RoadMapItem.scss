@@ -1,0 +1,63 @@
+.RoadMapItem {
+  line-height: 35px;
+  font-size: 20px;
+  &-Card {
+    //padding: '3px 30px';
+    text-align: center;
+    color: white;
+    background-color: #383737;
+    border-radius: 32px;
+    border: 3px solid var(--detailColor);
+    height: fit-content;
+    padding: 20px;
+
+    &-Content {
+      margin: -44px auto 20px auto;
+    }
+
+    &-Header {
+      border: 3px solid var(--detailColor);
+      padding: 8px 16px;
+      border-radius: 10px;
+      background-color: var(--detailColor);
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    &-Text {
+      padding-top: 20px;
+    }
+  }
+
+  &-box {
+    border-bottom: 3px solid;
+    padding-right: 50px;
+    height: 50%;
+    z-index: 200;
+  }
+
+  &-box1 {
+    transform: rotate(180deg);
+  }
+
+  &-Inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &-Circle {
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid red;
+  }
+
+  &-ScrollLine {
+    padding: 1px;
+    background-color: red;
+    position: absolute;
+    height: 200px;
+    opacity: 0.7;
+    z-index: 100;
+    overflow: hidden;
+  }
+}
