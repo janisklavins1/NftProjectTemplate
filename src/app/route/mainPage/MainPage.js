@@ -374,7 +374,7 @@ function MainPage() {
         image3={IMAGES.designer}
         image4={IMAGES.designer}
       />
-       <RoadMap/>
+       <RoadMap version={2}/>
       <Team
         data={TEAM_OBJECT}
         bigHeader="Behind The Scene"
