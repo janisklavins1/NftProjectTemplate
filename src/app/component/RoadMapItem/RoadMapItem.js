@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, {  useEffect } from 'react';
 import './RoadMapItem.scss';
 import { useAnimation, motion } from 'framer-motion/dist/framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -8,13 +8,22 @@ import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { FaRegClock, FaCheckCircle } from 'react-icons/fa';
 
-const RoadMapItem = ({ Header, Content, Direction, AnimationStart, Done, Alternate, MobileScreen }) => {
+const RoadMapItem = ({
+  Time,
+  Header,
+  Content,
+  Number,
+  Direction,
+  AnimationStart,
+  Done,
+  Alternate,
+  MobileScreen,
+}) => {
   const controls = useAnimation();
-  const [refe, inView] = useInView();
+  const [ref, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
@@ -69,7 +78,7 @@ const RoadMapItem = ({ Header, Content, Direction, AnimationStart, Done, Alterna
       return (
         <motion.div
           className="RoadMapItem-ScrollLine"
-          ref={refe}
+          ref={ref}
           animate={controls}
           variants={verLineAnimation}
           initial="hidden"
@@ -170,52 +179,54 @@ const RoadMapItem = ({ Header, Content, Direction, AnimationStart, Done, Alterna
   };
 
   const ItemAlternateRight = () => {
-    console.log(MobileScreen)
     return (
-      <TimelineItem>
+      <TimelineItem ref={ref}>
         {!MobileScreen && (
           <TimelineOppositeContent>
             <Typography variant="body1" className="RoadMapItemV2-Right-Time">
-              <div className="RoadMapItemV2-Right-Time-Card">9:30 am</div>
+              <div className="RoadMapItemV2-Right-Time-Card">{Time}</div>
             </Typography>
           </TimelineOppositeContent>
         )}
 
         <TimelineSeparator>
           <TimelineDot className="RoadMapItemV2-Dot">
-           
             <FaRegClock />
           </TimelineDot>
           <TimelineConnector className="RoadMapItemV2-Line" />
         </TimelineSeparator>
         <TimelineContent className="RoadMapItemV2-CardSpacing">
-          <div className="RoadMapItemV2-Right-Content">
+          <motion.div
+            className="RoadMapItemV2-Right-Content"
+            animate={{ scale: 0.5 }}
+            whileInView={{ scale: 1 }}
+            transition={{
+              duration: 0.25,
+            }}
+          >
             <div className="RoadMapItemV2-Right-Content-Container">
               <Typography
                 variant="h6"
                 component="h1"
                 className="RoadMapItemV2-Header"
               >
-                <span className="RoadMapItemV2-Number">1.</span> PARTNERSHIP
+                <span className="RoadMapItemV2-Number">{Number}.</span> {Header}
               </Typography>
-              <Typography className="RoadMapItemV2-Text">
-                Partnership With Aftermath Islands Which Will Grow To Be The
-                Biggest Metaverse Around.
-              </Typography>
+              <Typography className="RoadMapItemV2-Text">{Content}</Typography>
             </div>
-          </div>
+          </motion.div>
         </TimelineContent>
       </TimelineItem>
     );
   };
-  
+
   const ItemAlternateLeft = () => {
     return (
       <TimelineItem>
         {!MobileScreen && (
           <TimelineOppositeContent>
             <Typography variant="body1" className="RoadMapItemV2-Left-Time">
-              <div className="RoadMapItemV2-Left-Time-Card">9:30 am</div>
+              <div className="RoadMapItemV2-Left-Time-Card">{Time}</div>
             </Typography>
           </TimelineOppositeContent>
         )}
@@ -227,21 +238,22 @@ const RoadMapItem = ({ Header, Content, Direction, AnimationStart, Done, Alterna
           <TimelineConnector className="RoadMapItemV2-Line" />
         </TimelineSeparator>
         <TimelineContent className="RoadMapItemV2-CardSpacing">
-          <div className="RoadMapItemV2-Left-Content">
+          <motion.div
+            animate={{ scale: 0.5 }}
+            className="RoadMapItemV2-Left-Content"
+            whileInView={{ scale: 1 }}
+          >
             <div className="RoadMapItemV2-Left-Content-Container">
               <Typography
                 variant="h6"
                 component="h1"
                 className="RoadMapItemV2-Header"
               >
-                <span className="RoadMapItemV2-Number">1.</span> PARTNERSHIP
+                <span className="RoadMapItemV2-Number">{Number}.</span> {Header}
               </Typography>
-              <Typography className="RoadMapItemV2-Text">
-                Partnership With Aftermath Islands Which Will Grow To Be The
-                Biggest Metaverse Around.
-              </Typography>
+              <Typography className="RoadMapItemV2-Text">{Content}</Typography>
             </div>
-          </div>
+          </motion.div>
         </TimelineContent>
       </TimelineItem>
     );

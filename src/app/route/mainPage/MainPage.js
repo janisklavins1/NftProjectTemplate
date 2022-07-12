@@ -11,8 +11,9 @@ import MintPanel from '../../component/MintPanel/MintPanel';
 import RoadMap from '../../component/RoadMap/RoadMap';
 import ABI from '../mainPage/abi.json';
 import CONFIG_FILE from '../../util/config.json';
-import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT } from './MainPage.config';
+import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT, ROADMAP_INFO } from './MainPage.config';
 import Web3 from 'web3';
+import { motion } from 'framer-motion/dist/framer-motion';
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -374,7 +375,9 @@ function MainPage() {
         image3={IMAGES.designer}
         image4={IMAGES.designer}
       />
-       <RoadMap version={2}/>
+        <RoadMap version={2} data={ROADMAP_INFO}/>
+
+      
       <Team
         data={TEAM_OBJECT}
         bigHeader="Behind The Scene"
@@ -386,6 +389,8 @@ function MainPage() {
 
 export default MainPage;
 
-// TO DO
-// Create  Road Map, Menu https://dreamingboys.com/#about
-// Add abi.json in one place
+// TODO:
+//  - Create  Road Map, Menu https://dreamingboys.com/#about
+//  - Add abi.json in one place
+
+

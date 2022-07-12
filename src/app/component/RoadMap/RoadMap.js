@@ -1,11 +1,50 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import './RoadMap.scss';
 import Timeline from '@material-ui/lab/Timeline';
 import RoadMapItem from '../RoadMapItem/RoadMapItem';
 import { useMediaQuery } from 'react-responsive';
 
-const RoadMap = ({version}) => {
+
+const RoadMap = ({version, data}) => {
   const isMobile = useMediaQuery({ query: `(max-width: 910px)` });
+
+  const renderItem = (index, obj) => {
+
+    //  every 2 item goes to right side
+    if (index % 2 === 0) {
+      return (
+        <RoadMapItem
+          Time={obj.time}
+          Header={obj.heading}
+          Content={obj.content}
+          Number={index+1}
+          Done
+          Alternate
+          Direction={'right'}
+          MobileScreen={isMobile}
+          key={index}
+        />
+      );
+    }
+
+    return (
+      <RoadMapItem
+        Time={obj.time}
+        Header={obj.heading}
+        Content={obj.content}
+        Number={index+1}
+        Done
+        Alternate
+        Direction={'left'}
+        MobileScreen={isMobile}
+        key={index}
+      />
+    );
+  };
+
+  if (version === null || data === null) {
+    return <></>;
+  }
 
   if (version === 1) {
     return (
@@ -59,70 +98,7 @@ const RoadMap = ({version}) => {
             align={!isMobile ? 'alternate' : 'left'}
             className="RoadMapV2"
           >
-            <RoadMapItem
-              Header="Test"
-              Content={'asdasdaszxc zczxc asdas'}
-              Done
-              Alternate
-              Direction="right"
-              MobileScreen={isMobile}
-            />
-            <RoadMapItem
-              Header="Test"
-              Content={'asdasdaszxc zczxc asdas'}
-              Done
-              Alternate
-              Direction="left"
-              MobileScreen={isMobile}
-            />
-            <RoadMapItem
-              Header="Test"
-              Content={'asdasdaszxc zczxc asdas'}
-              Done
-              Alternate
-              Direction="right"
-              MobileScreen={isMobile}
-            />
-            <RoadMapItem
-              Header="Test"
-              Content={'asdasdaszxc zczxc asdas'}
-              Done
-              Alternate
-              Direction="left"
-              MobileScreen={isMobile}
-            />
-            <RoadMapItem
-              Header="Test"
-              Content={'asdasdaszxc zczxc asdas'}
-              Done
-              Alternate
-              Direction="right"
-              MobileScreen={isMobile}
-            />
-            <RoadMapItem
-              Header="Test"
-              Content={'asdasdaszxc zczxc asdas'}
-              Done
-              Alternate
-              Direction="left"
-              MobileScreen={isMobile}
-            />
-            <RoadMapItem
-              Header="Test"
-              Content={'asdasdaszxc zczxc asdas'}
-              Done
-              Alternate
-              Direction="right"
-              MobileScreen={isMobile}
-            />
-            <RoadMapItem
-              Header="Test"
-              Content={'asdasdaszxc zczxc asdas'}
-              Done
-              Alternate
-              Direction="left"
-              MobileScreen={isMobile}
-            />
+            {data.map((obj, index) => renderItem(index, obj))}
           </Timeline>
         </div>
       </div>
