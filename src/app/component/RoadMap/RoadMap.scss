@@ -1,0 +1,24 @@
+.RoadMap {
+  &-Container {
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: 910px) {
+      justify-content: flex-start;
+    }
+  }
+
+  &-TimeLine {
+    width: 80%;
+
+    @media only screen and (max-width: 910px) {
+      width: 100%;
+    }
+  }
+}
+
+.RoadMapV2 {
+  @media only screen and (max-width: 910px) {
+    align-items: flex-start !important;
+  }
+}

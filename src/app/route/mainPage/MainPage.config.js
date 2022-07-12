@@ -51,3 +51,46 @@ export const COMMUNITY_INFO = {
   fact5: 'Growing community',
   fact6: 'Non-stop development plan'
 };
+
+export const ROADMAP_INFO = [
+  {
+    time: 'Q2, 2022',
+    heading: 'Partnership',
+    content: 'Partnership With Aftermath Islands Which Will Grow To Be The Biggest Metaverse Around.'
+  },
+  {
+    time: 'Q2, 2022',
+    heading: 'MARKETING',
+    content: 'Build Out Of The Website, Social Media Marketing On Twitter, Instagram, Discord & Telegram.'
+  },
+  {
+    time: 'Q2, 2022',
+    heading: 'COMMUNITY GIVEWAYS',
+    content: 'We Will Be Launching Many Giveaways Through Our Social Media Platforms. Stay Tuned For Whitelist Spots, NFT Giveaways, Land Giveaways And Merch Giveaways.'
+  },
+  {
+    time: 'Q2, 2022',
+    heading: 'MINT',
+    content: 'We Will Kickoff Our Mint In July Of 2022 Whitelist - July 13, 2022 Public Mint - July 15,2022.'
+  },
+  {
+    time: 'Q3, 2022',
+    heading: 'MERCHANDISE DROP',
+    content: 'T-Shirts, Sweathshirts, Hats, Kicks, Stickers, Posters & More'
+  },
+  {
+    time: 'Q4, 2022 - Q1, 2023',
+    heading: 'LAND DEED MINT & AVATAR AIRDROP',
+    content: 'Land Deed Mint FREE For All Holders, 3D Avatar AirDrop And Utility Tokens.'
+  },
+  {
+    time: '22 March, 2022',
+    heading: 'METAVERSE',
+    content: 'Aftermath Apes Island Goes Live And We Get To Play, Live, Work And Start Earning In The Metaverse.'
+  },
+  {
+    time: 'Future',
+    heading: 'COLLABORATION',
+    content: 'We Will Look To Partner Up With Other Projects And See Where The Future Takes Us.'
+  },
+];

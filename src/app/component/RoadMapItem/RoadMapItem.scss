@@ -1,0 +1,302 @@
+.RoadMapItem {
+  &-Card {
+    text-align: center;
+    color: white;
+    background-color: var(--bgContrastColor);
+    border-radius: 12px;
+    border: 3px solid var(--detailColor);
+    height: fit-content;
+    padding: 20px;
+    width: 100%;
+
+    line-height: 35px;
+    font-size: 1.75rem;
+    font-weight: 500;
+
+    &-Content {
+      margin: -44px auto 20px auto;
+    }
+
+    &-Header {
+      border: 3px double #c78d06;
+      padding: 8px 16px;
+      border-radius: 10px;
+      background-color: var(--detailColor);
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    &-Text {
+      //padding-top: 20px;
+    }
+
+    &-Font {
+      font-size: 1.2rem;
+      font-family: 'Saira', sans-serif;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+
+      p {
+        margin: 3px 0;
+      }
+    }
+  }
+
+  &-Box {
+    border-bottom: 3px solid;
+    padding-right: 50px;
+    height: 50%;
+    z-index: 200;
+  }
+
+  &-Box1 {
+    transform: rotate(180deg);
+    padding-left: 50px;
+  }
+
+  &-Inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &-Circle {
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: var(--bgContrastColor);
+  }
+
+  &-ScrollLine {
+    padding: 1px;
+    background-color: red;
+    position: absolute;
+    height: 200px;
+    opacity: 0.7;
+    z-index: 100;
+    overflow: hidden;
+  }
+}
+
+// Version 2
+.RoadMapItemV2 {
+  &-Dot {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    font-size: 3rem;
+    background-color: var(--detailColor) !important;
+
+    @media only screen and (max-width: 910px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &-Line {
+    width: 8px !important;
+    background-color: var(--detailColor) !important;
+
+    @media only screen and (max-width: 910px) {
+      width: 4px !important;
+    }
+  }
+
+  &-CardSpacing {
+    padding-bottom: 80px !important;
+  }
+
+  &-Header {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    line-height: 1.4em !important;
+    color: var(--mainFontColor) !important;
+    padding-bottom: 20px;
+    font-family: 'Saira', sans-serif !important;
+
+    @media only screen and (max-width: 460px) {
+      font-size: 1rem !important;
+    }
+  }
+
+  &-Text {
+    color: var(--mainFontColor) !important;
+    font-family: 'Saira', sans-serif !important;
+
+    @media only screen and (max-width: 460px) {
+      font-size: 0.9rem !important;
+    }
+  }
+
+  &-Number {
+    color: var(--detailColor);
+  }
+
+  &-Right {
+    &-Time {
+      display: flex;
+      justify-content: flex-end;
+
+      &-Card {
+        background-color: white;
+        padding: 8px 13px 8px 13px;
+        position: relative;
+        text-transform: uppercase;
+        line-height: 1.4em;
+        font-weight: 600;
+        font-size: 1.2rem;
+        font-family: 'Saira', sans-serif;
+        top: 15px;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: 6px;
+          right: -12px;
+          width: 0;
+          height: 0;
+          border-top: 0px solid transparent;
+          border-left: 12px solid white;
+          border-bottom: 12px solid transparent;
+        }
+      }
+    }
+
+    &-Content {
+      border-radius: 15px 15px 15px 15px;
+      position: relative;
+      color: black;
+      top: -10px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -4;
+        border-radius: 15px;
+        background-color: var(--bgContrastColor);
+
+        @media only screen and (min-width: 910px) {
+          transform: perspective(500px) rotateX(-5deg) rotateY(-3deg)
+            skew(3deg, 0deg) scale3d(1, 1, 1);
+        }
+      }
+
+      @media only screen and (max-width: 910px) {
+        width: 70vh;
+      }
+
+      @media only screen and (max-width: 825px) {
+        width: 60vh;
+      }
+
+      @media only screen and (max-width: 735px) {
+        width: 50vh;
+      }
+
+      @media only screen and (max-width: 640px) {
+        width: 45vh;
+      }
+
+      @media only screen and (max-width: 590px) {
+        width: 40vh;
+      }
+
+      @media only screen and (max-width: 540px) {
+        width: 35vh;
+      }
+
+      &-Container {
+        padding: 40px;
+      }
+    }
+  }
+
+  &-Left {
+    &-Time {
+      display: flex;
+
+      &-Card {
+        background-color: white;
+        padding: 8px 13px 8px 13px;
+        position: relative;
+        line-height: 1.4em;
+        font-weight: 600;
+        font-size: 1.2rem;
+        font-family: 'Saira', sans-serif;
+        top: 15px;
+        text-transform: uppercase;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: 6px;
+          left: -12px;
+          width: 0;
+          height: 0;
+          border-top: 0px solid transparent;
+          border-right: 12px solid rgb(255, 255, 255);
+          border-bottom: 12px solid transparent;
+        }
+      }
+    }
+
+    &-Content {
+      border-radius: 15px 15px 15px 15px;
+      position: relative;
+      color: black;
+      top: -10px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -4;
+        border-radius: 15px;
+        background-color: var(--bgContrastColor);
+
+        @media only screen and (min-width: 910px) {
+          transform: perspective(500px) rotateX(-5deg) rotateY(3deg)
+            skew(-3deg, 0deg) scale3d(1, 1, 1);
+        }
+      }
+
+      @media only screen and (max-width: 910px) {
+        width: 70vh;
+      }
+
+      @media only screen and (max-width: 825px) {
+        width: 60vh;
+      }
+
+      @media only screen and (max-width: 735px) {
+        width: 50vh;
+      }
+
+      @media only screen and (max-width: 640px) {
+        width: 45vh;
+      }
+
+      @media only screen and (max-width: 590px) {
+        width: 40vh;
+      }
+
+      @media only screen and (max-width: 540px) {
+        width: 35vh;
+      }
+
+      &-Container {
+        padding: 40px;
+      }
+    }
+  }
+}
+
+.MuiTimelineItem-missingOppositeContent:before {
+  padding: unset !important;
+}
