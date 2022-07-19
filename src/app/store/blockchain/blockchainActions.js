@@ -32,6 +32,7 @@ const updateAccountRequest = (payload) => {
   };
 };
 
+
 export const connect = () => {
   return async (dispatch) => {
     dispatch(connectRequest());
@@ -52,6 +53,7 @@ export const connect = () => {
 
     const { ethereum } = window;
     const metamaskIsInstalled = ethereum && ethereum.isMetaMask;
+    
     if (metamaskIsInstalled) {
       Web3EthContract.setProvider(ethereum);
       let web3 = new Web3(ethereum);
@@ -62,6 +64,7 @@ export const connect = () => {
         const networkId = await ethereum.request({
           method: "net_version",
         });
+
         if (networkId == CONFIG.NETWORK.ID) {
           const SmartContractObj = new Web3EthContract(
             abi,
@@ -84,12 +87,15 @@ export const connect = () => {
           // Add listeners end
         } else {
           dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
+          console.log("asd")
         }
       } catch (err) {
         dispatch(connectFailed("Something went wrong."));
+        console.log("asd")
       }
     } else {
       dispatch(connectFailed("Install Metamask."));
+      console.log("asd")
     }
   };
 };
@@ -100,3 +106,5 @@ export const updateAccount = (account) => {
     dispatch(fetchData(account));
   };
 };
+
+

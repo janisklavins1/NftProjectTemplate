@@ -92,7 +92,7 @@ const RoadMap = ({version, data}) => {
 
   if (version === 2) {
     return (
-      <div className="RoadMap-Container">
+      <div className="RoadMap-Container" id='RoadMap'>
         <div className="RoadMap-TimeLine">
           <Timeline
             align={!isMobile ? 'alternate' : 'left'}

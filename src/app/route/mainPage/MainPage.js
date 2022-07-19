@@ -8,6 +8,7 @@ import Team from '../../component/Team/Team';
 import ContentWrapper from '../../component/ContentWrapper/ContentWrapper';
 import About from '../../component/About/About';
 import MintPanel from '../../component/MintPanel/MintPanel';
+import MenuBar from '../../component/MenuBar/MenuBar';
 import RoadMap from '../../component/RoadMap/RoadMap';
 import ABI from '../mainPage/abi.json';
 import CONFIG_FILE from '../../util/config.json';
@@ -157,6 +158,7 @@ function MainPage() {
   useEffect(() => {
     getConfig();
     getMintAmountTemp();
+
   }, []);
 
   useEffect(() => {
@@ -221,20 +223,7 @@ function MainPage() {
     return <div className="WalletAddress">{blockchain.account}</div>;
   };
 
-  const header = () => {
-    return (
-      <header className="Header">
-        <div className="Header-Container">
-          <div className="Header-Row">
-            <div className="Header-Logo">
-              <img src={IMAGES.logo} />
-            </div>
-            <div className="Header-Right">{connectWallet()}</div>
-          </div>
-        </div>
-      </header>
-    );
-  };
+
 
   const main = () => {
     return (
@@ -318,49 +307,13 @@ function MainPage() {
     );
   };
 
-  const roadMap = () => {
-    return (
-      <div className="RoadMap">
-        <div className="RoadMap-Wrapper">
-          <div className="RoadMap-Header">ROADMAP</div>
 
-          <div className="RoadMap-Card">
-            <div className="RoadMap-CardText">
-              PHASE 1 <br />
-              <br /> In the first place, a website, Instagram, discord and
-              twitter will be established. Advertisements will be shared on all
-              social media and the project will be promoted. Efforts will be
-              made to establish a strong and solid community.
-            </div>
-            <img className="RoadMap-Painter" src={IMAGES.painter} />
-          </div>
-          <div className="RoadMap-Card" id="card2">
-            <div className="RoadMap-CardText">
-              PHASE2 <br />
-              <br />
-              3333 BluBeanz ready to launch. All are special and unique. There
-              are Rarities among them: Common, Rare, Super Rare, and Legendary.
-            </div>
-            <img className="RoadMap-Painter2" src={IMAGES.painter2} />
-          </div>
-          <div className="RoadMap-Card">
-            <div className="RoadMap-CardText">
-              PHASE 3 <br />
-              <br /> Exclusive BB Merch Store gets unlocked. We’ll be releasing
-              a collection of collectible figures. This project is dedicated to
-              all of our fellow night crew degens, WGMI!
-            </div>
-            <img className="RoadMap-Painter" src={IMAGES.painter3} />
-          </div>
-        </div>
-      </div>
-    );
-  };
+ 
 
   return (
+    <>
+    <MenuBar projectName={'BLUEBENZ'} />
     <ContentWrapper>
-      {/* <MintPanel/> */}
-     
       <About
         data={COMMUNITY_INFO}
         image1={IMAGES.designer}
@@ -368,29 +321,21 @@ function MainPage() {
         image3={IMAGES.designer}
         image4={IMAGES.designer}
       />
-      <About
-        data={COMMUNITY_INFO}
-        image1={IMAGES.designer}
-        image2={IMAGES.designer}
-        image3={IMAGES.designer}
-        image4={IMAGES.designer}
-      />
-        <RoadMap version={2} data={ROADMAP_INFO}/>
-
-      
+      <RoadMap version={2} data={ROADMAP_INFO} />
       <Team
         data={TEAM_OBJECT}
         bigHeader="Behind The Scene"
         smallHeader="The Team"
       />
     </ContentWrapper>
+    </>
   );
 }
 
 export default MainPage;
 
 // TODO:
-//  - Create  Road Map, Menu https://dreamingboys.com/#about
+//  - Create  Menu https://dreamingboys.com/#about
 //  - Add abi.json in one place
 
 

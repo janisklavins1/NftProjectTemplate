@@ -18,7 +18,7 @@ const Team = ({ data, bigHeader, smallHeader }) => {
   };
 
   return (
-    <footer className="Team">
+    <footer className="Team" id="Team">
       <div className="Team-Heading">
         <div className="Team-SmallHeading">{smallHeader}</div>
         <div className="Team-BigHeading">{bigHeader}</div>
