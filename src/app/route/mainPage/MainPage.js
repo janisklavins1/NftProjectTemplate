@@ -12,9 +12,10 @@ import MenuBar from '../../component/MenuBar/MenuBar';
 import RoadMap from '../../component/RoadMap/RoadMap';
 import ABI from '../mainPage/abi.json';
 import CONFIG_FILE from '../../util/config.json';
-import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT, ROADMAP_INFO } from './MainPage.config';
+import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT, ROADMAP_INFO, SLIDER_IMAGES } from './MainPage.config';
 import Web3 from 'web3';
 import { motion } from 'framer-motion/dist/framer-motion';
+import Slider from '../../component/Slider/Slider';
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -313,7 +314,9 @@ function MainPage() {
   return (
     <>
     <MenuBar projectName={'BLUEBENZ'} />
+    <Slider images={SLIDER_IMAGES} bgImage={IMAGES.marketing}/>
     <ContentWrapper>
+      
       <About
         data={COMMUNITY_INFO}
         image1={IMAGES.designer}

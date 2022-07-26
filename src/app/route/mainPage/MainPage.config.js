@@ -94,3 +94,25 @@ export const ROADMAP_INFO = [
     content: 'We Will Look To Partner Up With Other Projects And See Where The Future Takes Us.'
   },
 ];
+
+
+export const SLIDER_IMAGES = [
+  {
+    image: IMAGES.dev
+  },
+  {
+    image: IMAGES.meancurry
+  },
+  {
+    image: IMAGES.designer
+  },
+  {
+    image: IMAGES.designer
+  },
+  {
+    image: IMAGES.marketing
+  },
+  {
+    image: IMAGES.designer
+  }
+];
