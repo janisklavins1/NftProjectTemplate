@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Image.scss';
 import { FaSpinner } from 'react-icons/fa';
 
-const Image = ({ src, alt }) => {
+const Image = ({ src, alt, className }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const renderImagePlaceHolder = () => {
@@ -21,6 +21,7 @@ const Image = ({ src, alt }) => {
     return (
       <img
         style={imageLoaded ? {} : { display: 'none' }}
+        className={className}
         src={src || ''}
         alt={alt}
         onLoad={() => setImageLoaded(true)}

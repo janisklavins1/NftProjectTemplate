@@ -1,0 +1,72 @@
+$image-size: 55px;
+$animation-speed: 20s;
+
+.Slider {
+  &-Container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-ImageBg {
+    height: 630px;
+    width: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 460px) {
+      height: 430px;
+    }
+  }
+
+  &-ImageContainer {
+    background-color: rgba(19, 7, 29, 0.5);
+    padding: 40px 0;
+    margin-top: 110px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 430vh; // image size
+    animation: bannermove $animation-speed linear infinite;
+
+    @media only screen and (max-width: 460px) {
+      margin-top: 80px;
+      width: 330vh;
+    }
+
+    &-Wrapper {
+      width: 100%;
+      display: flex;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    ul {
+      display: flex;
+      gap: 20px;
+      list-style-type: none;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0;
+    }
+
+    li {
+      width: 100%;
+
+      &:first-child {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
