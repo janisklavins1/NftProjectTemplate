@@ -1,0 +1,24 @@
+.Bubble {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 10px;
+  background: linear-gradient(90deg, #f78f03, #f8b006);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: linear-gradient(90deg, #f8b006, #f78f03);
+  }
+
+  @media only screen and (max-width: 750px) {
+    display: none;
+  }
+
+  svg {
+    color: white;
+    font-size: 4rem;
+  }
+}

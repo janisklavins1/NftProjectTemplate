@@ -58,8 +58,8 @@ const MenuBar = ({ projectName, refs }) => {
       <>
         {NavButton('Home')}
         {NavButton('DashBoard')}
-        {NavButton('Mint', 'RoadMap')}
-        {NavButton('Claim')}
+        {NavButton('Mint', 'MintPanel')}
+        {NavButton('RoadMap', 'RoadMap')}
         {NavButton('Team', 'Team')}
       </>
     );

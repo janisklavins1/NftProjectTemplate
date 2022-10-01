@@ -1,49 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './MintPanel.scss';
 import Image from '../Image/Image';
 import bg from '../../images/bgMintImage.png';
 import image from '../../images/ss.png';
-import image1 from '../../images/ss1.png';
+import { useTimer } from './useTimer';
 
 const MintPanel = () => {
-  const [timerDays, setTimerDays] = useState();
-  const [timerHours, setTimerHours] = useState();
-  const [timerMinutes, setTimerMinutes] = useState();
-  const [timerSeconds, setTimerSeconds] = useState();
-
-  useEffect(() => {
-    startTimer();
-  }, []);
-
-  let interval;
-
-  const startTimer = () => {
-    const countDownDate = new Date('Dec 29,2022 20:00 EST').getTime();
-
-    interval = setInterval(() => {
-      const now = new Date().getTime();
-
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (24 * 60 * 60 * 1000));
-      const hours = Math.floor(
-        (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
-      const seconds = Math.floor((distance % (60 * 1000)) / 1000);
-
-      if (distance < 0) {
-        //setShowMintPanel(true);
-        //clearInterval(interval.current);
-      } else {
-        // Update Timer
-        setTimerDays(days);
-        setTimerHours(hours);
-        setTimerMinutes(minutes);
-        setTimerSeconds(seconds);
-      }
-    });
-  };
+  const [timerDays, timerHours, timerMinutes, timerSeconds] = useTimer('Oct 03,2022 20:00 EST');
 
   const Clock = (number, event) => {
     return (
@@ -55,7 +18,7 @@ const MintPanel = () => {
   };
 
   return (
-    <div className="MintPanel-Container">
+    <div className="MintPanel-Container" id='MintPanel'>
       <div className="MintPanel-ImageContainer">
         <div className="MintPanel-ImageContainer-Bg">
           <Image src={bg} />

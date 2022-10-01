@@ -16,6 +16,7 @@ import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT, ROADMAP_INFO, SLIDER_IMAGES } from
 import Web3 from 'web3';
 import { motion } from 'framer-motion/dist/framer-motion';
 import Slider from '../../component/Slider/Slider';
+import DiscordBubble from '../../component/DiscordBubble/DiscordBubble';
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -278,6 +279,7 @@ function MainPage() {
   return (
     <>
     <MenuBar projectName={'BLUEBENZ'} />
+    <DiscordBubble/>
     <Slider images={SLIDER_IMAGES} bgImage={IMAGES.marketing}/>
     <ContentWrapper>
       <MintPanel/>
