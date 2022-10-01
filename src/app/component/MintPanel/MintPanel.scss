@@ -1,0 +1,200 @@
+.MintPanel {
+  &-Container {
+    padding-top: 100px;
+    display: flex;
+
+    @media only screen and (max-width: 1180px) {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+    }
+  }
+
+  &-ImageContainer {
+    position: relative;
+    margin-right: -10px;
+    z-index: -100;
+
+    @media only screen and (max-width: 1180px) {
+      margin-right: 0;
+      max-width: 650px;
+      width: 100%;
+    }
+
+    // Background
+    &-Bg {
+      background-color: #2b2f44;
+      border-radius: 50%;
+      padding: 70px 70px;
+
+      @media only screen and (max-width: 1180px) {
+        padding: 30px 30px;
+      }
+
+      img {
+        z-index: -50;
+        width: 578px;
+        height: 578px;
+
+        @media only screen and (max-width: 1180px) {
+          max-width: 650px;
+          width: 100%;
+          max-height: 700px;
+          height: 100%;
+        }
+      }
+    }
+
+    // Avatar
+    &-Image {
+      position: absolute;
+      top: 10px;
+      left: 24px;
+      z-index: 100;
+
+      @media only screen and (max-width: 1180px) {
+        top: -10px;
+        left: 60px;
+      }
+
+      @media only screen and (max-width: 666px) {
+        top: -10px;
+        left: 15px;
+      }
+
+      @media only screen and (max-width: 415px) {
+        top: -10px;
+        left: 6px;
+      }
+
+      img {
+        width: 650px;
+        height: 700px;
+
+        @media only screen and (max-width: 1180px) {
+          max-width: 650px;
+          width: 100%;
+          max-height: 700px;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &-Text {
+    color: white;
+    padding-top: 100px;
+    width: 40%;
+
+    @media only screen and (max-width: 1180px) {
+      padding: 0;
+      width: 80%;
+      margin-top: -30px;
+    }
+
+    &-Heading {
+      font-size: 47px;
+
+      @media only screen and (max-width: 1180px) {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+      }
+
+      span {
+        &:nth-child(1) {
+          font-weight: 600;
+        }
+
+        &:nth-child(2) {
+          color: #c247a5;
+        }
+
+        &:nth-child(3) {
+          color: #48eb8f;
+        }
+      }
+    }
+
+    &-LongText {
+      font-size: 24px;
+      font-weight: 600;
+
+      @media only screen and (max-width: 1180px) {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: justify;
+      }
+    }
+
+    &-CountDown {
+      background: linear-gradient(90deg, #c247a5, #7b4fc6);
+      text-align: center;
+      padding: 20px 10px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 400;
+      margin: 30px 0;
+
+      @media only screen and (max-width: 1180px) {
+        padding: 20px 10px;
+        margin: 30px 0;
+        font-size: 12px;
+      }
+
+      &-Bg {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        @media only screen and (max-width: 1180px) {
+          gap: 10px;
+        }
+      }
+    }
+
+    &-LowerText {
+      font-size: 18px;
+      font-weight: 600;
+
+      @media only screen and (max-width: 1180px) {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-TimeBox {
+    &-Number {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      font-weight: 600;
+
+      @media only screen and (max-width: 1380px) {
+        width: 50px;
+        height: 50px;
+      }
+
+      @media only screen and (max-width: 1180px) {
+        font-size: 28px;
+      }
+    }
+
+    &-Text {
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      font-weight: 600;
+
+      @media only screen and (max-width: 1180px) {
+        font-size: 12px;
+      }
+    }
+  }
+}

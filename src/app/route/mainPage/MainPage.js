@@ -43,16 +43,11 @@ function MainPage() {
     SHOW_BACKGROUND: false,
   });
 
-  const [timerDays, setTimerDays] = useState();
-  const [timerHours, setTimerHours] = useState();
-  const [timerMinutes, setTimerMinutes] = useState();
-  const [timerSeconds, setTimerSeconds] = useState();
   const [showMintPanel, setShowMintPanel] = useState(false);
   const [input, setInput] = useState('');
   const [mintAmountTemp, setMintAmountTemp] = useState();
   const [priceContract, setPriceContract] = useState();
 
-  let interval;
 
   const truncate = (input, len) =>
     input.length > len ? `${input.substring(0, len)}...` : input;
@@ -124,37 +119,6 @@ function MainPage() {
     SET_CONFIG(CONFIG_FILE);
   };
 
-  const startTimer = () => {
-    const countDownDate = new Date('Dec 29,2021 20:00 EST').getTime();
-
-    interval = setInterval(() => {
-      const now = new Date().getTime();
-
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (24 * 60 * 60 * 1000));
-      const hours = Math.floor(
-        (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
-      const seconds = Math.floor((distance % (60 * 1000)) / 1000);
-
-      if (distance < 0) {
-        setShowMintPanel(true);
-        //clearInterval(interval.current);
-      } else {
-        // Update Timer
-        setTimerDays(days);
-        setTimerHours(hours);
-        setTimerMinutes(minutes);
-        setTimerSeconds(seconds);
-      }
-    });
-  };
-
-  useEffect(() => {
-    //startTimer();
-  });
 
   useEffect(() => {
     getConfig();
@@ -316,7 +280,7 @@ function MainPage() {
     <MenuBar projectName={'BLUEBENZ'} />
     <Slider images={SLIDER_IMAGES} bgImage={IMAGES.marketing}/>
     <ContentWrapper>
-      
+      <MintPanel/>
       <About
         data={COMMUNITY_INFO}
         image1={IMAGES.designer}

@@ -10,6 +10,12 @@ export const IMAGES = {
   dev: require('../../images/dev.png').default,
   marketing: require('../../images/marketing.png').default,
   meancurry: require('../../images/meancurry.jpg').default,
+  slider1: require('../../images/slider1.png').default,
+  slider2: require('../../images/slider2.png').default,
+  slider3: require('../../images/slider3.png').default,
+  slider4: require('../../images/slider4.png').default,
+  slider5: require('../../images/slider5.png').default,
+  slider6: require('../../images/slider6.png').default
 };
 
 export const TEAM_OBJECT = [
@@ -98,21 +104,21 @@ export const ROADMAP_INFO = [
 
 export const SLIDER_IMAGES = [
   {
-    image: IMAGES.dev
+    image: IMAGES.slider6
   },
   {
-    image: IMAGES.meancurry
+    image: IMAGES.slider1
   },
   {
-    image: IMAGES.designer
+    image: IMAGES.slider2
   },
   {
-    image: IMAGES.designer
+    image: IMAGES.slider3
   },
   {
-    image: IMAGES.marketing
+    image: IMAGES.slider4
   },
   {
-    image: IMAGES.designer
+    image: IMAGES.slider5
   }
 ];

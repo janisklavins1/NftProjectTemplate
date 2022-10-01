@@ -91,18 +91,18 @@ const RoadMapItem = ({
     if (Done) {
       return (
         <div className="RoadMapItem-Card-Font">
-          <p>
+          <div>
             <FaCheckCircle /> {Content}
-          </p>
-          <p>
+          </div>
+          <div>
             <FaCheckCircle /> {Content}
-          </p>
-          <p>
+          </div>
+          <div>
             <FaCheckCircle /> {Content}
-          </p>
-          <p>
+          </div>
+          <div>
             <FaCheckCircle /> {Content}
-          </p>
+          </div>
         </div>
       );
     }

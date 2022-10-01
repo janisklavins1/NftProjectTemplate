@@ -24,7 +24,7 @@ $animation-speed: 20s;
     position: absolute;
     top: 0;
     display: flex;
-    width: 430vh; // image size
+    width: 450vh; // image size
     animation: bannermove $animation-speed linear infinite;
 
     @media only screen and (max-width: 460px) {
