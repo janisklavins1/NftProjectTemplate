@@ -92,16 +92,19 @@ const RoadMap = ({version, data}) => {
 
   if (version === 2) {
     return (
-      <div className="RoadMap-Container" id='RoadMap'>
-        <div className="RoadMap-TimeLine">
-          <Timeline
-            align={!isMobile ? 'alternate' : 'left'}
-            className="RoadMapV2"
-          >
-            {data.map((obj, index) => renderItem(index, obj))}
-          </Timeline>
+      <>
+        <h2 className='Title' id="RoadMap">ROAD MAP</h2>
+        <div className="RoadMap-Container" >
+          <div className="RoadMap-TimeLine">
+            <Timeline
+              align={!isMobile ? 'alternate' : 'left'}
+              className="RoadMapV2"
+            >
+              {data.map((obj, index) => renderItem(index, obj))}
+            </Timeline>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 

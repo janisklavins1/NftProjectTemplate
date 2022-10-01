@@ -12,11 +12,18 @@ import MenuBar from '../../component/MenuBar/MenuBar';
 import RoadMap from '../../component/RoadMap/RoadMap';
 import ABI from '../mainPage/abi.json';
 import CONFIG_FILE from '../../util/config.json';
-import { COMMUNITY_INFO, IMAGES, TEAM_OBJECT, ROADMAP_INFO, SLIDER_IMAGES } from './MainPage.config';
+import {
+  COMMUNITY_INFO,
+  IMAGES,
+  TEAM_OBJECT,
+  ROADMAP_INFO,
+  SLIDER_IMAGES,
+} from './MainPage.config';
 import Web3 from 'web3';
 import { motion } from 'framer-motion/dist/framer-motion';
 import Slider from '../../component/Slider/Slider';
 import DiscordBubble from '../../component/DiscordBubble/DiscordBubble';
+import WelcomePanel from '../../component/WelcomePanel/WelcomePanel';
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -48,7 +55,6 @@ function MainPage() {
   const [input, setInput] = useState('');
   const [mintAmountTemp, setMintAmountTemp] = useState();
   const [priceContract, setPriceContract] = useState();
-
 
   const truncate = (input, len) =>
     input.length > len ? `${input.substring(0, len)}...` : input;
@@ -120,11 +126,9 @@ function MainPage() {
     SET_CONFIG(CONFIG_FILE);
   };
 
-
   useEffect(() => {
     getConfig();
     getMintAmountTemp();
-
   }, []);
 
   useEffect(() => {
@@ -188,8 +192,6 @@ function MainPage() {
 
     return <div className="WalletAddress">{blockchain.account}</div>;
   };
-
-
 
   const main = () => {
     return (
@@ -273,38 +275,33 @@ function MainPage() {
     );
   };
 
-
- 
-
   return (
     <>
-    <MenuBar projectName={'BLUEBENZ'} />
-    <DiscordBubble/>
-    <Slider images={SLIDER_IMAGES} bgImage={IMAGES.marketing}/>
-    <ContentWrapper>
-      <MintPanel/>
-      <About
-        data={COMMUNITY_INFO}
-        image1={IMAGES.designer}
-        image2={IMAGES.designer}
-        image3={IMAGES.designer}
-        image4={IMAGES.designer}
-      />
-      <RoadMap version={2} data={ROADMAP_INFO} />
-      <Team
-        data={TEAM_OBJECT}
-        bigHeader="Behind The Scene"
-        smallHeader="The Team"
-      />
-    </ContentWrapper>
+      <MenuBar projectName={'BLUEBENZ'} />
+      <DiscordBubble linkToDiscord={'https://www.nftgosu.io/'} />
+      <Slider images={SLIDER_IMAGES} bgImage={IMAGES.marketing} />
+      <ContentWrapper>
+        <MintPanel />
+        <WelcomePanel
+          linkToTwitter={'https://www.nftgosu.io/'}
+          linkToDiscord={'https://www.nftgosu.io/'}
+        />
+        {/* <About
+          data={COMMUNITY_INFO}
+          image1={IMAGES.designer}
+          image2={IMAGES.designer}
+          image3={IMAGES.designer}
+          image4={IMAGES.designer}
+        /> */}
+        <RoadMap version={2} data={ROADMAP_INFO} />
+        <Team
+          data={TEAM_OBJECT}
+          bigHeader="Behind The Scene"
+          smallHeader="The Team"
+        />
+      </ContentWrapper>
     </>
   );
 }
 
 export default MainPage;
-
-// TODO:
-//  - Create  Menu https://dreamingboys.com/#about
-//  - Add abi.json in one place
-
-

@@ -84,7 +84,7 @@
     margin-bottom: 0 !important;
     margin-top: 0 !important;
     font-size: 3rem;
-    background-color: var(--detailColor) !important;
+    background-color: #fbc205d8 !important;
 
     @media only screen and (max-width: 910px) {
       font-size: 1.5rem;
@@ -93,7 +93,7 @@
 
   &-Line {
     width: 8px !important;
-    background-color: var(--detailColor) !important;
+    background-color: #fbc205 !important;
 
     @media only screen and (max-width: 910px) {
       width: 4px !important;
@@ -176,7 +176,7 @@
         left: 0;
         z-index: -4;
         border-radius: 15px;
-        background-color: var(--bgContrastColor);
+        background: rgba(0, 0, 0, 0.315);
 
         @media only screen and (min-width: 910px) {
           transform: perspective(500px) rotateX(-5deg) rotateY(-3deg)
@@ -258,7 +258,7 @@
         left: 0;
         z-index: -4;
         border-radius: 15px;
-        background-color: var(--bgContrastColor);
+        background: rgba(0, 0, 0, 0.185);
 
         @media only screen and (min-width: 910px) {
           transform: perspective(500px) rotateX(-5deg) rotateY(3deg)

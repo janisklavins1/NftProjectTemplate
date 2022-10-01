@@ -2,10 +2,10 @@ import React from 'react';
 import './DiscordBubble.scss';
 import { FaDiscord } from 'react-icons/fa';
 
-const DiscordBubble = () => {
+const DiscordBubble = ({linkToDiscord}) => {
   return (
     <a
-      href="https://www.nftgosu.io/"
+      href={linkToDiscord ? linkToDiscord : '#'}
       target="_blank"
       rel="noopener noreferrer"
       className="Bubble"
