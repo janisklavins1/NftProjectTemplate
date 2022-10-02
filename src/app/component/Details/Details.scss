@@ -1,0 +1,102 @@
+.DetailsContainer {
+  color: white;
+  display: flex;
+  gap: 50px;
+  padding-top: 5rem;
+
+  @media only screen and (max-width: 950px) {
+    flex-direction: column-reverse;
+    padding-top: 2rem;
+  }
+}
+
+.Chart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 50%;
+
+  @media only screen and (max-width: 950px) {
+    width: 100%;
+  }
+
+  div {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h5 {
+      font-size: 4.8rem;
+      margin: 0;
+
+      @media only screen and (max-width: 950px) {
+        font-size: 2.8rem;
+      }
+    }
+
+    p {
+      @media only screen and (max-width: 950px) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &-Double {
+    grid-column-start: span 2;
+  }
+}
+
+.Details {
+  width: 50%;
+
+  @media only screen and (max-width: 950px) {
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    color: #fbc203;
+    font-weight: 600;
+    font-size: 2.3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    @media only screen and (max-width: 950px) {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+
+  &-Address {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &-Button {
+      background: linear-gradient(90deg, #f78f03, #f8b006);
+      border-radius: 10px;
+      width: fit-content;
+      padding: 0 12px;
+      margin-top: 20px;
+      border: 1px solid #f8b006;
+
+      &:hover {
+        background: unset;
+        //cursor: pointer;
+        //border: 1px solid #f8b006;
+      }
+
+      p {
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+    }
+  }
+}

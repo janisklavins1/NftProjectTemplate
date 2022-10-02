@@ -35,6 +35,7 @@ $animation-speed: 20s;
     &-Wrapper {
       width: 100%;
       display: flex;
+      overflow: hidden;
     }
 
     img {

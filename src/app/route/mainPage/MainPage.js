@@ -24,6 +24,7 @@ import { motion } from 'framer-motion/dist/framer-motion';
 import Slider from '../../component/Slider/Slider';
 import DiscordBubble from '../../component/DiscordBubble/DiscordBubble';
 import WelcomePanel from '../../component/WelcomePanel/WelcomePanel';
+import Details from '../../component/Details/Details';
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -286,13 +287,7 @@ function MainPage() {
           linkToTwitter={'https://www.nftgosu.io/'}
           linkToDiscord={'https://www.nftgosu.io/'}
         />
-        {/* <About
-          data={COMMUNITY_INFO}
-          image1={IMAGES.designer}
-          image2={IMAGES.designer}
-          image3={IMAGES.designer}
-          image4={IMAGES.designer}
-        /> */}
+        <Details/>
         <RoadMap version={2} data={ROADMAP_INFO} />
         <Team
           data={TEAM_OBJECT}
