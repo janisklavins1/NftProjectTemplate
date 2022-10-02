@@ -25,6 +25,7 @@ import Slider from '../../component/Slider/Slider';
 import DiscordBubble from '../../component/DiscordBubble/DiscordBubble';
 import WelcomePanel from '../../component/WelcomePanel/WelcomePanel';
 import Details from '../../component/Details/Details';
+import Faq from '../../component/Faq/Faq';
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -289,6 +290,7 @@ function MainPage() {
         />
         <Details/>
         <RoadMap version={2} data={ROADMAP_INFO} />
+        <Faq/>
         <Team
           data={TEAM_OBJECT}
           bigHeader="Behind The Scene"
