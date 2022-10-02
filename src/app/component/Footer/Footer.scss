@@ -1,0 +1,49 @@
+.Footer {
+  border-top: 5px solid var(--detailColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-Social {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-Container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+
+      a {
+      }
+
+      svg {
+        &:hover {
+          color: var(--detailColor);
+        }
+        color: white;
+        font-size: 4rem;
+
+        @media only screen and (max-width: 320px) {
+          font-size: 3.1rem;
+        }
+      }
+    }
+
+    &-Text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+  }
+}
+
+.Opensea {
+  &:hover {
+    background: var(--detailColor);
+    border-radius: 50%;
+  }
+}

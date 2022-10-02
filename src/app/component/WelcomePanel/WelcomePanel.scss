@@ -27,6 +27,11 @@
         width: 400px;
         height: 400px;
       }
+
+      @media only screen and (max-width: 400px) {
+        width: 260px;
+        height: 260px;
+      }
     }
   }
 }

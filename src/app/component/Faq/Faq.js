@@ -11,7 +11,7 @@ const Faq = () => {
           <ul>
             <li>
               <input
-                lassName="Faq-Container-Check"
+                className="Faq-Container-Check"
                 type="checkbox"
                 defaultChecked
               />

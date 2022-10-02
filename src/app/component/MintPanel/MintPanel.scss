@@ -184,6 +184,12 @@
       @media only screen and (max-width: 1180px) {
         font-size: 28px;
       }
+
+      @media only screen and (max-width: 350px) {
+        width: 40px;
+        height: 40px;
+        //font-size: 22px;
+      }
     }
 
     &-Text {
@@ -194,6 +200,10 @@
 
       @media only screen and (max-width: 1180px) {
         font-size: 12px;
+      }
+
+      @media only screen and (max-width: 350px) {
+        font-size: 10px;
       }
     }
   }

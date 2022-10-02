@@ -183,7 +183,7 @@ const RoadMapItem = ({
       <TimelineItem ref={ref}>
         {!MobileScreen && (
           <TimelineOppositeContent>
-            <Typography variant="body1" className="RoadMapItemV2-Right-Time">
+            <Typography variant="body1" className="RoadMapItemV2-Right-Time" component={'span'}>
               <div className="RoadMapItemV2-Right-Time-Card">{Time}</div>
             </Typography>
           </TimelineOppositeContent>
@@ -225,7 +225,7 @@ const RoadMapItem = ({
       <TimelineItem>
         {!MobileScreen && (
           <TimelineOppositeContent>
-            <Typography variant="body1" className="RoadMapItemV2-Left-Time">
+            <Typography variant="body1" className="RoadMapItemV2-Left-Time" component={'span'}>
               <div className="RoadMapItemV2-Left-Time-Card">{Time}</div>
             </Typography>
           </TimelineOppositeContent>

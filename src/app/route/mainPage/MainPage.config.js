@@ -8,7 +8,7 @@ export const IMAGES = {
   painter3: require('../../images/painter3.png').default,
   designer: require('../../images/designer.png').default,
   dev: require('../../images/dev.png').default,
-  marketing: require('../../images/marketing.png').default,
+  marketing: require('../../images/azx.jpg').default,
   meancurry: require('../../images/meancurry.jpg').default,
   slider1: require('../../images/slider1.png').default,
   slider2: require('../../images/slider2.png').default,
@@ -22,25 +22,25 @@ export const TEAM_OBJECT = [
   {
     name: 'Designer',
     url: 'https://twitter.com/Blu_Beanz',
-    image: IMAGES.designer,
+    image: IMAGES.slider1,
     role: 'Artist',
   },
   {
     name: 'Designer',
     url: 'https://twitter.com/Blu_Beanz',
-    image: IMAGES.designer,
+    image: IMAGES.slider2,
     role: 'Retard',
   },
   {
     name: 'Designer',
     url: 'https://twitter.com/Blu_Beanz',
-    image: IMAGES.designer,
+    image: IMAGES.slider3,
     role: 'Retard',
   },
   {
     name: 'Designer',
     url: 'https://twitter.com/Blu_Beanz',
-    image: IMAGES.designer,
+    image: IMAGES.slider5,
     role: 'Artist',
   },
 ];

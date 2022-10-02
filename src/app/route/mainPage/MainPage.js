@@ -26,6 +26,7 @@ import DiscordBubble from '../../component/DiscordBubble/DiscordBubble';
 import WelcomePanel from '../../component/WelcomePanel/WelcomePanel';
 import Details from '../../component/Details/Details';
 import Faq from '../../component/Faq/Faq';
+import Footer from '../../component/Footer/Footer';
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -297,6 +298,7 @@ function MainPage() {
           smallHeader="The Team"
         />
       </ContentWrapper>
+      <Footer/>
     </>
   );
 }
