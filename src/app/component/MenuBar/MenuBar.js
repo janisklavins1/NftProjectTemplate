@@ -56,9 +56,8 @@ const MenuBar = ({ projectName, refs }) => {
   const NavButtonList = () => {
     return (
       <>
-        {NavButton('Home')}
-        
         {NavButton('Mint', 'MintPanel')}
+        {NavButton('About', 'About')}
         {NavButton('RoadMap', 'RoadMap')}
         {NavButton('FAQ', 'Faq')}
         {NavButton('Team', 'Team')}

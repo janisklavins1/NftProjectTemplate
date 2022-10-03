@@ -85,7 +85,7 @@ const Details = () => {
               5% of secondary sales will be added to the community wallet (1.5%)
               and project funding (3.5%)
             </p>
-            <p>
+            <p ref={ref}>
               Bones Club is the successor to the Bones Club Heritage collection
             </p>
             <div className="Details-Address">
@@ -98,7 +98,7 @@ const Details = () => {
     };
 
   return (
-    <div className='DetailsContainer' ref={ref}>
+    <div className='DetailsContainer'>
         {renderChart()}
         {renderDetails()}
     </div>

@@ -117,7 +117,7 @@ const WelcomePanel = ({linkToTwitter, linkToDiscord}) => {
 
   return (
     <>
-      <div className="WelcomePanel">
+      <div className="WelcomePanel" id='About'>
         {TextPanel()}
         <div className="WelcomePanel-ImageContainer">
           <Image className="WelcomePanel-ImageContainer-Image" src={nft} />
